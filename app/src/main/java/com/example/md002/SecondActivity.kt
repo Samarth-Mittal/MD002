@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_second.*
 
 class SecondActivity : AppCompatActivity() {
@@ -23,6 +24,10 @@ class SecondActivity : AppCompatActivity() {
         //var description: String = getDescription(bundle?.getInt("desc")!!)
         var description = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. "
         textViewMovieDescription.text = description
+
+        textViewTrailer.setOnClickListener(){
+            Toast.makeText(applicationContext, "Trailer Toast", Toast.LENGTH_SHORT).show()
+        }
 
     }
 
